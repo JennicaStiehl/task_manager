@@ -1,8 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>New Task</title>
+    <link rel="stylesheet" href="/main.css" title="CSS" type="text/css" />
+    <h1>New Task</h1>
+  </head>
+  <div class="navbar">
+    <ul>
+      <li><a href="/tasks">All Tasks</a></li>
+    </ul>
+  </div>
+  <body>
+    <form action="/tasks" method="post">
+      <p>Enter a new task:</p>
+      <p><label>Title:</label><br/>
+         <input type="text", name='task[title]'/></p>
+      <p><label>Description:</label><br/>
+         <textarea name='task[description]'></textarea></p>
+      <p><input type='submit'/></p>
 
-  <form action="/tasks" method="post">
-    <p>Enter a new task:</p>
-    <p><input type="text", name='task[title]'/><br</></p>
-    <p><textarea name='task[description]'></textarea><br/></p>
-    <p><input type='submit'/></p>
-
-  </form>
+    </form>
+  </body>
+</html>

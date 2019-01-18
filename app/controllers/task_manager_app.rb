@@ -32,9 +32,19 @@ class TaskManagerApp < Sinatra::Base
     erb :edit
   end
 
+  get '/tasks/:id/show' do
+    @task = Task.find(params[:id])
+    erb :show
+  end
+
+  get '/tasks/:id/delete' do |id|
+    @task = Task.destroy(id.to_i)
+    redirect '/tasks'
+  end
+
   set :method_override, true  # this allows us to use _method in the form
 
-  put 'tasks/:id' do |id|
+  put '/tasks/:id' do |id|
     Task.update(id.to_i, params[:task])
     redirect "/tasks/#{id}"
   end
@@ -42,7 +52,5 @@ class TaskManagerApp < Sinatra::Base
   delete '/tasks/:id' do |id|
     Task.destroy(id.to_i)
     redirect '/tasks'
-    # erb :index
   end
-
 end

@@ -1,7 +1,22 @@
-<form action="/tasks/<%= @task.id %>" method="post">
-  <p>Edit</p>
-  <input type="hidden" name="method" value="PUT" />
-  <input type="text" name='task[title]' value="<%= @task.title %>" /><br/>
-  <textarea name='task[description]'><%= @task.description %></<textarea><br/>
-  <input type='submit'/>
-</form>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Edit Task</title>
+    <link rel="stylesheet" href="/main.css" title="CSS" type="text/css"/>
+    <h1>Edit</h1>
+  </head>
+  <div class="navbar">
+    <ul>
+      <li><a href="/">Dashboard</a></li>
+      <li><a href="/tasks">All Tasks</a></li>
+    </ul>
+  </div>
+  <body>
+    <form action="/tasks/<%= @task.id %>" method="post">
+      <p>Edit</p>
+      <input type="hidden" name="_method" value="PUT" />
+      <input type="text" name='task[title]' value="<%= @task.title %>"/><br/>
+      <textarea name='task[description]'><%= @task.description %></textarea><br/>
+      <input type='submit'/>
+  </body>
+</html>

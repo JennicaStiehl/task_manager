@@ -1,11 +1,36 @@
-<h1>All Tasks</h1>
-
-<% @tasks.each do |task| %>
-  <h3><a href="/tasks/<%= task.id %>"><%= task.title %></a></h3>
-  <p><%= task.description %></p>
-  <a href="/tasks/<%= task.id  %>/edit">Edit</a>
-  <form action="/tasks/<%= task.id %>" method="POST">
-    <input type="hidden" name="_method" value="DELETE">
-    <input type="submit" value="delete"/>
-  </form>
-<% end %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>All Tasks</title>
+    <link rel="stylesheet" href="/main.css" title="CSS" type="text/css" />
+    <h1>All Tasks</h1>
+  </head>
+  <div class="navbar">
+    <ul>
+      <li><a href="/">Dashboard</a></li>
+      <li><a href="/tasks/new">New Task</a></li>
+    </ul>
+  </div>
+  <body>
+    <table>
+      <thead class="table-headers">
+        <tr>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <% @tasks.each do |task| %>
+      <tbody class="table-body">
+        <tr>
+          <td><%= task.title %></td>
+          <td><%= task.description %></td>
+          <td><a href="/tasks/<%= task.id %>/edit">Edit</a></td>
+          <td><a href="/tasks/<%= task.id %>/delete">Delete</a></td>
+          <td><a href="/tasks/<%= task.id %>/show">View</a></td><br/>
+        </tr>
+      </tbody>
+      <% end %>
+    </table>
+  </body>
+</html>

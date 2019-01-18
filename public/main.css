@@ -1,0 +1,39 @@
+title{
+  color: navy;
+}
+
+.navbar{
+  color: white;
+  border: navy;
+  background-color: navy;
+  height: 3em;
+}
+
+.navbar ul{
+  padding:1em;
+  list-style: none;
+}
+
+.navbar li{
+  display: inline;
+}
+
+.navbar a{
+  color:#fff;
+  text-decoration: none;
+  font-size: 18px;
+  text-align: center;
+  padding-right: 1em;
+}
+
+table{
+  width: 75%;
+  text-align: left;
+  color: navy;
+}
+
+.table-headers{
+}
+
+.table-body{
+}

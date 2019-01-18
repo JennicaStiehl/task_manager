@@ -1,5 +1,24 @@
-<a href="/tasks">Task Index</a>
-
-<h1><%= @task.title %></h1>
-
-<p><%= @task.description %></p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>All Tasks</title>
+    <link rel="stylesheet" href="/main.css" title="CSS" type="text/css" />
+    <h1>View Task Details</h1>
+  </head>
+  <body>
+    <div class="navbar">
+      <ul>
+        <li><a href="/">Dashboard</a></li>
+        <li><a href="/tasks">All Tasks</a></li>
+      </ul>
+    </div>
+    <form>
+      <h3><%= @task.title %></h3>
+      <p><%= @task.description %></p>
+      <a href="/tasks/<%= @task.id  %>/edit">Edit</a>
+      <form action="/tasks/<%= @task.id %>" method="POST">
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="submit" value="delete"/>
+    </form>
+  </body>
+</html>
