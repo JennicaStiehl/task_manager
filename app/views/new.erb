@@ -15,8 +15,12 @@
       <p>Enter a new task:</p>
       <p><label>Title:</label><br/>
          <input type="text", name='task[title]'/></p>
-      <p><label>Description:</label><br/>
-         <textarea name='task[description]'></textarea></p>
+      <p><label>Priority:</label><br/>
+          <input type="number", name='task[priority]'/></p>
+      <p><label for="task[due_date]">Due Date:</label><br/>
+          <input type="datetime", name='task[due_date]'/></p>
+          <p><label>Description:</label><br/>
+            <textarea name='task[description]'></textarea></p>
       <p><input type='submit'/></p>
 
     </form>

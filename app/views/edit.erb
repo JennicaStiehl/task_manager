@@ -13,10 +13,15 @@
   </div>
   <body>
     <form action="/tasks/<%= @task.id %>" method="post">
-      <p>Edit</p>
       <input type="hidden" name="_method" value="PUT" />
-      <input type="text" name='task[title]' value="<%= @task.title %>"/><br/>
-      <textarea name='task[description]'><%= @task.description %></textarea><br/>
-      <input type='submit'/>
+      <p><label for="task[title]">Title:</label><br/>
+      <input type="text" name='task[title]' value="<%= @task.title %>"/><br/></p>
+      <p><label for="task[priority]">Priority:</label><br/>
+      <input type="number" name='task[priority]' value="<%= @task.priority %>"/><br/></p>
+      <p><label for="task[due_date]">Due Date:</label><br/>
+      <input type="datetime" name='task[due_date]' value="<%= @task.due_date %>"/><br/></p>
+      <p><label for="task[description]">Description:</label><br/>
+        <textarea name='task[description]'><%= @task.description %></textarea><br/></p>
+      <p><input type='submit'/></p>
   </body>
 </html>

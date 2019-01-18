@@ -33,7 +33,11 @@ table{
 }
 
 .table-headers{
+  border-style: inset;
+  border-bottom: navy;
+
 }
 
-.table-body{
+p{
+  padding: .5em;
 }

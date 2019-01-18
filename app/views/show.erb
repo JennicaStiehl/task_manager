@@ -13,8 +13,11 @@
       </ul>
     </div>
     <form>
-      <h3><%= @task.title %></h3>
-      <p><%= @task.description %></p>
+
+      <h3><label>Title: </label><%= @task.title %></h3>
+      <p><label>Priority: </label><%= @task.priority %></p>
+      <p><label>Due Date: </label><%= @task.due_date %></p>
+      <p><label>Description:</label><%= @task.description %></p>
       <a href="/tasks/<%= @task.id  %>/edit">Edit</a>
       <form action="/tasks/<%= @task.id %>" method="POST">
         <input type="hidden" name="_method" value="DELETE">

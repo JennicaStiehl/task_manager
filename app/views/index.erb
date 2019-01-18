@@ -17,6 +17,8 @@
         <tr>
           <th>Title</th>
           <th>Description</th>
+          <th>Priority</th>
+          <th>Due Date</th>
           <th>Actions</th>
         </tr>
       </thead>
@@ -25,6 +27,8 @@
         <tr>
           <td><%= task.title %></td>
           <td><%= task.description %></td>
+          <td><%= task.priority %></td>
+          <td><%= task.due_date %></td>
           <td><a href="/tasks/<%= task.id %>/edit">Edit</a></td>
           <td><a href="/tasks/<%= task.id %>/delete">Delete</a></td>
           <td><a href="/tasks/<%= task.id %>/show">View</a></td><br/>
